@@ -1,0 +1,375 @@
+/* ================================================================
+   CIEBP — CAMPEONATO ESCOLAR DE FUTEBOL DE ROBÔS
+   Arquivo: style.css (Design System & Estilos Globais)
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   1. DESIGN SYSTEM (Tokens de Cor e Variáveis)
+   ---------------------------------------------------------------- */
+:root {
+    /* Cores Institucionais */
+    --navy-dark: #0B1340;
+    --navy-main: #193375;
+    --blue-mid: #0C87D1;
+    --pink-action: #FF1D6E;
+    
+    /* Superfícies */
+    --bg-body: #F4F6FB;
+    --bg-surface: #FFFFFF;
+    --text-dark: #111827;
+    --text-muted: #6B7280;
+    
+    /* Efeitos */
+    --border-subtle: rgba(11, 19, 64, 0.1);
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 40px rgba(11, 19, 64, 0.1);
+    --pink-glow: rgba(255, 29, 110, 0.35);
+    
+    /* Transições */
+    --transition-base: all 0.3s ease;
+}
+
+/* ----------------------------------------------------------------
+   2. RESET & TIPOGRAFIA BASE
+   ---------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Textura de Grid Global (Estilo Tecnológico Discreto) */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+        linear-gradient(var(--border-subtle) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* ----------------------------------------------------------------
+   3. HEADER & NAVEGAÇÃO
+   ---------------------------------------------------------------- */
+.logo-hex {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--pink-action), #8B00FF);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    animation: hexPulse 3s ease-in-out infinite;
+}
+
+.logo-text-main {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--navy-main);
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.logo-text-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* Efeito nos links de navegação */
+header nav a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transition-base);
+}
+
+header nav a:hover, header nav a.active {
+    color: var(--navy-main);
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--blue-mid);
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after, header nav a.active::after {
+    width: 100%;
+}
+
+.linha-rosa {
+    background-color: #FF1D6E;
+    border: none;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Badge "AO VIVO" */
+.badge-live {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 29, 110, 0.1);
+    border: 1px solid var(--pink-action);
+    color: var(--pink-action);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.dot-live {
+    width: 8px;
+    height: 8px;
+    background-color: var(--pink-action);
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+/* ----------------------------------------------------------------
+   4. ARENA AO VIVO (Scoreboard)
+   ---------------------------------------------------------------- */
+.arena-section {
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.arena-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.section-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--border-subtle);
+}
+
+/* Painel do Placar */
+.scoreboard {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, #111B52 100%);
+    border-top: 4px solid var(--pink-action);
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de luz sutil no fundo do placar */
+.scoreboard::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 100px;
+    background: radial-gradient(ellipse, var(--pink-glow) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.match-meta {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.match-round {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--blue-mid);
+    background: rgba(12, 135, 209, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.teams-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team-block {
+    text-align: center;
+    flex: 1;
+}
+
+.team-robot {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 15px var(--pink-glow));
+    animation: robotFloat 4s ease-in-out infinite;
+}
+
+.team-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--bg-surface);
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.team-class {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Placar Central */
+.score-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.score-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.score-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6rem;
+    color: var(--pink-action);
+    line-height: 1;
+    text-shadow: 0 0 25px var(--pink-glow);
+}
+
+.score-sep {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.match-timer {
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--bg-surface);
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ----------------------------------------------------------------
+   5. VIDEO WRAPPER (Transmissão)
+   ---------------------------------------------------------------- */
+.video-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 100px auto 70px auto;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--navy-dark);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-overlay-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(11, 19, 64, 0.85);
+    backdrop-filter: blur(5px);
+    color: var(--pink-action);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 5;
+    border: 1px solid var(--pink-action);
+}
+
+/* ----------------------------------------------------------------
+   6. ANIMAÇÕES GLOBAIS
+   ---------------------------------------------------------------- */
+@keyframes hexPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(255, 29, 110, 0); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px var(--pink-glow); }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes robotFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ----------------------------------------------------------------
+   7. MEDIA QUERIES (Responsividade Global)
+   ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .teams-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .score-num { font-size: 4rem; }
+    .team-name { font-size: 2rem; }
+    .scoreboard { padding: 2rem 1rem; }
+    .video-wrapper { border-radius: 0; }
+}
