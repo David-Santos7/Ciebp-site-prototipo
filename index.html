@@ -18,24 +18,25 @@
   <header class="bg-white border-b border-gray-200 sticky top-0 z-[100] shadow-sm">
     <div class="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <div class="logo-hex">🤖</div>
+        <div class="logo-hex">
+          <img src="/imagem/logo 200x200.png" alt="">
+        </div>
         <div>
-          <div class="logo-text-main text-[#193375]">CIEBP</div>
-          <div class="logo-text-sub text-[#FF1D6E]">Campeonato de Robôs · 2026</div>
+          <div class="logo-text-main text-[#193375]">Futebol de Robôs · 2026</div>
         </div>
       </div>
 
       <nav class="hidden md:flex gap-6">
         <a href="#inicio" class="active">Início</a>
         <a href="#Futebol">Futebol</a>
-        <a href="#arena">Arena</a>
+        <a href="#aovivo">Ao Vivo</a>
         <a href="#jogos">Jogos</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#regras">Regras</a>
+        <a href="/sobre.html">Sobre</a>
       </nav>
 
-      <div class="badge-live">
-        <span class="dot-live"></span>
-        AO VIVO
+      <div class="logo-ciebp">
+        <img src="/imagem/logo-ciebp.png" alt="logo-ciebp">
       </div>
     </div>
   </header>
@@ -47,16 +48,16 @@
         <article class="slide">
           <div class="slide-content">
             <div class="col-text">
-              <span class="inline-block text-[#0C87D1] font-bold tracking-widest uppercase text-xs mb-2 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">⚡ Temporada 2026</span>
+              <span class="inline-block text-[#0C87D1] font-bold tracking-widest uppercase text-xs mb-2 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">🏆 Temporada 2026</span>
               <h2 class="title-primary">Futebol de <span class="highlight">Robôs</span></h2>
               <p class="subtitle">A maior competição de robótica escolar do estado. Lógica de programação e estratégia definindo os campeões em campo.</p>
-              <button class="btn-cta">VER TABELA DE JOGOS</button>
+              <button class="btn-cta" href="#jogos"><a href="#jogos">VER TABELA DE JOGOS</a></button>
             </div>
             <div class="col-visual">
               <div class="orbital-container">
                 <div class="orbital-line"></div>
                 <div class="image-frame">
-                  <img src="imagem/logo-ciebp.png" alt="Robô na Arena" class="w-full h-full object-cover">
+                  <img src="imagem/psd-banner-site_01.png" alt="Robô na Arena" class="w-full h-full object-cover">
                </div>
               </div>
             </div>
@@ -68,14 +69,14 @@
           <div class="slide-content">
             <div class="col-text">
               <span class="inline-block text-[#0C87D1] font-bold tracking-widest uppercase text-xs mb-2 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Educação e Tecnologia</span>
-              <h2 class="title-primary">Mentes que <span class="highlight">Criam</span></h2>
-              <p class="subtitle">O Centro de Inovação da Educação Básica Paulista impulsionando o futuro através de espaços maker e cultura digital.</p>
+              <h2 class="title-primary">Alunos<span class="highlight"> Criativos</span></h2>
+              <p class="subtitle">O Centro de Inovação da Educação Básica Paulista impulsionando os estudantes para o futuro através de espaços maker e cultura digital.</p>
             </div>
             <div class="col-visual">
               <div class="orbital-container">
                 <div class="orbital-line"></div>
                 <div class="image-frame">
-                  <img src="/imagem/ciebp_itapecerida.png" alt="Alunos programando" class="w-full h-full object-cover">
+                  <img src="/imagem/psd-banner-site_02.png" alt="Alunos programando" class="w-full h-full object-cover">
                 </div>
               </div>
             </div>
@@ -85,15 +86,16 @@
                <article class="slide">
           <div class="slide-content">
             <div class="col-text">
-              <span class="inline-block text-[#0C87D1] font-bold tracking-widest uppercase text-xs mb-2 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Educação e Tecnologia</span>
-              <h2 class="title-primary">Mentes que <span class="highlight">Criam</span></h2>
+              <span class="inline-block text-[#0C87D1] font-bold tracking-widest uppercase text-xs mb-2 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Acolhimento</span>
+              <h3 class="title-primary">Juntos<span class="highlight"></span></h3>
+              <h3 class="highlight">Impulsionando a Criatividade e Inovação</h3>
               <p class="subtitle">O Centro de Inovação da Educação Básica Paulista impulsionando o futuro através de espaços maker e cultura digital.</p>
             </div>
             <div class="col-visual">
               <div class="orbital-container">
                 <div class="orbital-line"></div>
                 <div class="image-frame">
-                  <img src="img/promo-2.jpg" alt="Alunos programando" class="w-full h-full object-cover">
+                  <img src="/imagem/visitas.png" alt="Alunos programando" class="w-full h-full object-cover">
                 </div>
               </div>
             </div>
@@ -108,30 +110,12 @@
     <button class="nav-arrow next" aria-label="Próximo Slide">&#10095;</button>
   </section>
 
-    <section class="hero-ciebp" id="inicio" aria-label="Destaques CIEBP">
-    <div class="carousel-container">
-      <div class="carousel-track" id="track">
-        
-        <article class="slide">
-          <div class="slide-content">
-            <div class="col-visual">
-              <div class="orbital-container">
-                <div class="orbital-line"></div>
-                <div class="image-frame-2">
-                  <img src="imagem/logo-ciebp.png" alt="Robô na Arena" class="w-full h-full object-cover">
-               </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <button class="nav-arrow prev" aria-label="Slide Anterior">&#10094;</button>
-    <button class="nav-arrow next" aria-label="Próximo Slide">&#10095;</button>
-  </section>
 <hr class="linha-rosa">
-
+    <div class="title-primary" style="text-align: center; margin-top: 40px;">
+      <h1>Em ano de Copa do Mundo,</h1>
+      <h1>quem entra em Campo</h1>
+      <h2 ><span class="highlight">É o CIEBP Itapecerica da Serra</span></h2>
+    </div>
 <div class="video-wrapper" id="Futebol">
       <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Stream" allowfullscreen></iframe>
     </div>
@@ -139,9 +123,11 @@
 
 <div class=" bg-navy">
   <hr class="linha-rosa " >
-  <br><br>
-
-<section id="ao-vivo" class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-5 gap-8">
+ <br>
+  <div id="aovivo">
+      <h1 class="title-secundary">Transmissão 🔴 Ao Vivo</h1>
+  </div>
+<section id="aovivo" class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-5 gap-8">
     
     <div class="lg:col-span-2 bg-white p-8 rounded-xl-custom shadow-xl border-t-8 border-ciebp-pink flex flex-col justify-center items-center gap-10 h-full">
         
@@ -176,7 +162,7 @@
     </div>
 
     <div class="lg:col-span-3 bg-black rounded-xl-custom overflow-hidden shadow-2xl aspect-video border-4 border-white">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Live Stream" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="100%"  height="315" src="https://www.youtube.com/embed/N2k1APn8-18?si=D4lSNspQxxay5lY7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     
 </section>
@@ -230,7 +216,7 @@
 
   <hr class="linha-rosa">
 
-  <section class="bg-white border-t border-gray-200 py-20" id="sobre">
+  <section class="bg-white border-t border-gray-200 py-20" id="regras">
     <div class="max-w-[1400px] mx-auto px-6">
       <div class="flex items-center gap-4 mb-12">
         <h3 class="font-['Bebas_Neue'] text-4xl text-[#193375]">REGRAS E INFORMAÇÕES</h3>
@@ -265,12 +251,39 @@
     </div>
   </section>
 
-  <footer class="bg-[#0B1340] py-12 text-center border-t-4 border-[#FF1D6E]">
-    <div class="max-w-[1400px] mx-auto px-6">
-      <div class="font-['Bebas_Neue'] text-2xl text-white opacity-70 tracking-widest mb-2">CIEBP · CENTRO DE INOVAÇÃO DA EDUCAÇÃO BÁSICA PAULISTA</div>
-      <div class="text-gray-400 text-sm font-['Barlow']">Desenvolvido com dedicação pela equipe de TI · Temporada 2026</div>
+<footer class="bg-[#0B1340] py-12 text-center border-t-4 border-[#FF1D6E]">
+  <div class="max-w-[1400px] mx-auto px-6">
+    
+    <div class="mb-8 flex justify-center">
+      <img src="/imagem/logo-ciebp.png" alt="Logo CIEBP" class="h-16 brightness-0 invert opacity-90">
     </div>
-  </footer>
+
+    <nav class="mb-8">
+      <ul class="flex flex-wrap justify-center gap-6 md:gap-10 font-['Barlow'] text-white uppercase tracking-widest text-sm">
+        <li><a href="#inicio" class="hover:text-[#FF1D6E] transition-colors">Início</a></li>
+        <li><a href="#Futebol" class="hover:text-[#FF1D6E] transition-colors">Futebol</a></li>
+        <li><a href="#aovivo" class="hover:text-[#FF1D6E] transition-colors">Ao Vivo</a></li>
+        <li><a href="#jogos" class="hover:text-[#FF1D6E] transition-colors">Jogos</a></li>
+        <li><a href="#regras" class="hover:text-[#FF1D6E] transition-colors">Regras</a></li>
+        <li><a href="/sobre.html" class="hover:text-[#FF1D6E] transition-colors">Sobre</a></li>
+      </ul>
+    </nav>
+
+    <hr class="border-white/10 mb-8 w-full">
+
+    <div class="space-y-2">
+     
+      <div class="text-gray-400 text-sm font-['Barlow']">
+        © 2026 Todos os direitos reservados. 
+        <span class="block md:inline mt-2 md:mt-0 md:ml-2 text-[#FF1D6E] font-semibold">
+            Desenvolvido pela equipe CIEBP · Temporada 2026
+        </span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+  
 
   <script src="js/app.js"></script>
   <script src="js/carrousel.js"></script>

@@ -3,6 +3,10 @@
    Focado em profundidade, transições infinitas, e layout assimétrico.
    ================================================================ */
 
+header, nav {
+    position: relative;
+    z-index: 1000 !important; /* Valor bem alto */
+}
 /* 1. ESTRUTURA E VIEWPORT */
 .hero-ciebp {
     position: relative;
@@ -47,7 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 1rem;
     width: 100%;
     max-width: 1300px;
 }
@@ -82,6 +86,16 @@
     text-transform: uppercase;
 }
 
+.title-secundary {
+    font-family: 'Barlow', sans-serif; /* Trocado de Bebas para Barlow */
+    font-size: clamp(1rem, 4vw, 4.5rem);
+    font-weight: 800;    color: #b9c6e6; /* Navy */
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+
 .highlight {
     color: #FF1D6E; /* CIEBP Pink no destaque */
 }
@@ -107,7 +121,7 @@
 /* Moldura Circular Principal (Gigante) */
 .image-frame {
     /* Tamanho aumentado significativamente */
-    width: clamp(500px, 75vw, 1020px);
+    width: clamp(435px, 75vw, 890px);
     height: clamp(320px, 45vw, 550px);
     border-radius: 10%;
     border: 6px solid #FFFFFF;
@@ -263,6 +277,20 @@
     .nav-arrow:hover {
         transform: scale(1.1);
     }
+    /* Melhora a acessibilidade para quem navega via TAB */
+.nav-arrow:focus {
+    outline: 3px solid #FF1D6E;
+    outline-offset: 2px;
+}
+.nav-arrow {
+    /* ... */
+    z-index: 50; /* Suficiente para ficar sobre o slide, mas sob o nav */
+}
+
+/* Evita que o texto seja selecionado acidentalmente ao clicar rápido nas setas */
+.hero-ciebp {
+    user-select: none;
+}
     .prev { left: 35%; }
     .next { right: 35%; }
 }
