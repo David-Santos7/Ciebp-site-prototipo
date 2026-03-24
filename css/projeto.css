@@ -1,0 +1,109 @@
+/* CONTEINER E CARTÃO PRINCIPAL */
+.blog-container {
+    max-width: 900px;
+    margin: 60px auto; /* Centraliza o bloco na tela com margem no topo e fim */
+    padding: 0 20px;
+}
+
+.content-card {
+    background-color: #ffffff; /* Fundo branco do cartão */
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra elegante */
+    font-family: 'Inter', sans-serif;
+}
+
+/* TÍTULOS E DESTAQUES */
+.content-card h1 {
+    color: #e91e63; /* Rosa estilo imagem 2 */
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.destaque {
+    background-color: #002B5B; /* Azul escuro do CIEBP */
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* SEÇÕES DE CONTEÚDO E TEXTOS */
+.conteudo-topico {
+    margin-bottom: 35px;
+}
+
+.conteudo-topico h2 {
+    color: #002B5B; /* Subtítulos em azul escuro */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.conteudo-topico p {
+    color: #4b5563; /* Cinza escuro para facilitar a leitura */
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* LISTA PADRÃO (Objetivos) */
+.lista-padrao {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.lista-padrao li {
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+/* LISTA DO CRONOGRAMA (Com linha rosa) */
+.cronograma-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.cronograma-item {
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    border-left: 4px solid #e91e63; /* Linha rosa na lateral igual a imagem 2 */
+    padding-left: 15px;
+}
+
+/* TABELA DE HABILIDADES */
+.tabela-responsiva {
+    overflow-x: auto; /* Permite rolar no celular se a tabela for muito larga */
+}
+
+.tabela-habilidades {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabela-habilidades th,
+.tabela-habilidades td {
+    border: 1px solid #e5e7eb;
+    padding: 15px;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+.tabela-habilidades th {
+    background-color: #f8fafc;
+    color: #002B5B;
+    font-weight: 600;
+}

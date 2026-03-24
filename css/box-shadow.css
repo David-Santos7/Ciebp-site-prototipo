@@ -143,8 +143,8 @@ header, nav {
     width: clamp(800px, 80vw, 1400px);
     height: clamp(420px, 75vw, 550px);
     border-radius: 5%;
-    border: 6px solid #FFFFFF;
-    background: #FFFFFF;
+    border: 2px solid #ffffff;
+    background: #ffffff;
     overflow: hidden;
     position: relative;
     z-index: 2;
@@ -279,8 +279,8 @@ header, nav {
     }
     /* Melhora a acessibilidade para quem navega via TAB */
 .nav-arrow:focus {
-    outline: 3px solid #FF1D6E;
-    outline-offset: 2px;
+    outline: 20px solid #FF1D6E;
+    outline-offset: 20px;
 }
 .nav-arrow {
     /* ... */
@@ -291,6 +291,6 @@ header, nav {
 .hero-ciebp {
     user-select: none;
 }
-    .prev { left: 35%; }
-    .next { right: 35%; }
+    .prev { left: 15%; }
+    .next { right: 15%; }
 }

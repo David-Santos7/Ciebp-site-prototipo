@@ -129,6 +129,19 @@ header nav a:hover::after, header nav a.active::after {
     width: 100%;
 }
 
+.link-regras {
+  text-decoration: none;
+  color: #55718d; 
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.link-regras:hover {
+  color: #0070ba; 
+  border-bottom: 2px solid #0070ba;
+}
+
 .linha-rosa {
     background-color: #FF1D6E;
     border: none;
